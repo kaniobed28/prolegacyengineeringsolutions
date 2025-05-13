@@ -1,0 +1,22 @@
+<section class="project-details-section">
+  <div class="project-header">
+    <h1>{{ project?.title }}</h1>
+    <p class="description">{{ project?.description }}</p>
+  </div>
+
+  <ng-container *ngIf="project; else notFound">
+    <div class="gallery">
+      <div class="gallery-item" *ngFor="let img of project.images">
+        <img [src]="img" [alt]="project.title" />
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-template #notFound>
+    <p class="not-found">No project found with ID: {{ projectId }}</p>
+  </ng-template>
+
+  <div class="back-container">
+    <a routerLink="/projects" class="back-button">← Back to Projects</a>
+  </div>
+</section>
