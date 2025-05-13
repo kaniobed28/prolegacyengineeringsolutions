@@ -1,0 +1,51 @@
+:host {
+  position: fixed;
+  top: 10px;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+.app-header {
+  background-color: #333;
+  padding: 1rem;
+  margin: 0vw 2vw 0vw 2vw;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    .logo {
+      font-size: 1.5rem;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+
+    .nav-list {
+      list-style: none;
+      display: flex;
+
+      gap: 1rem;
+      margin: 0;
+      padding: 0;
+      color: white;
+
+      li a {
+        text-decoration: none;
+      }
+      li a:hover {
+       text-decoration: underline;
+     }
+    }
+
+  }
+
+}
+
